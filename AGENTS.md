@@ -9,6 +9,7 @@ This repository stores OAT published and generated assets, especially images use
 - Treat `oat-standards` as the shared source of truth for asset naming, provenance, and usage rules.
 - If this repo conflicts with `oat-standards`, follow `oat-standards` and update the asset workflow to match.
 - Prefer the repo README and local asset notes, then consult `oat-standards` for conventions.
+- Cross-repo open items (decisions, loose ends with no obvious repo home) are tracked in `oat-standards/todo.md`.
 
 ## Working rules
 
