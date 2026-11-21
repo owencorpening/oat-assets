@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="440" viewBox="0 0 700 440" font-family="Liberation Sans, Arial, Helvetica, sans-serif">
+  <rect width="700" height="440" fill="#ffffff"/>
+
+  <!-- Corridor band -->
+  <text x="350" y="30" text-anchor="middle" font-size="15" font-weight="bold" fill="#333">GWETC corridor</text>
+  <text x="350" y="48" text-anchor="middle" font-size="12" fill="#555">water · power · gas · rail · road + fiber in one right-of-way</text>
+  <rect x="30" y="62" width="640" height="26" rx="4" fill="#e8e6e1"/>
+  <line x1="30" y1="67" x2="670" y2="67" stroke="#3a8dde" stroke-width="3"/>
+  <line x1="30" y1="72" x2="670" y2="72" stroke="#5dc9a5" stroke-width="3"/>
+  <line x1="30" y1="77" x2="670" y2="77" stroke="#8a7fd8" stroke-width="3"/>
+  <line x1="30" y1="82" x2="670" y2="82" stroke="#f0a030" stroke-width="3"/>
+
+  <!-- Nodes along the corridor -->
+  <circle cx="110" cy="75" r="11" fill="#fff" stroke="#555" stroke-width="2"/>
+  <circle cx="590" cy="75" r="11" fill="#fff" stroke="#555" stroke-width="2"/>
+  <circle cx="350" cy="75" r="15" fill="#c9a227" stroke="#555" stroke-width="2"/>
+  <text x="110" y="108" text-anchor="middle" font-size="11" fill="#666">corridor node</text>
+  <text x="590" y="108" text-anchor="middle" font-size="11" fill="#666">corridor node</text>
+
+  <!-- Feeds from node into the cluster -->
+  <path d="M338 90 C 300 140, 270 160, 268 200" fill="none" stroke="#3a8dde" stroke-width="4"/>
+  <path d="M345 90 C 330 140, 320 165, 318 196" fill="none" stroke="#5dc9a5" stroke-width="4"/>
+  <path d="M355 90 C 370 140, 380 165, 382 196" fill="none" stroke="#8a7fd8" stroke-width="4"/>
+  <path d="M362 90 C 400 140, 430 160, 432 200" fill="none" stroke="#f0a030" stroke-width="4"/>
+  <text x="260" y="165" text-anchor="end" font-size="12" fill="#3a8dde" font-weight="bold">Power</text>
+  <text x="303" y="125" text-anchor="end" font-size="12" fill="#2f9c7a" font-weight="bold">Gas</text>
+  <text x="397" y="125" font-size="12" fill="#6a5fc0" font-weight="bold">Water</text>
+  <text x="440" y="165" font-size="12" fill="#c77f10" font-weight="bold">Rail + road</text>
+
+  <!-- Cluster -->
+  <ellipse cx="350" cy="252" rx="132" ry="58" fill="#f6f3ea" stroke="#c9a227" stroke-width="2.5"/>
+  <text x="350" y="246" text-anchor="middle" font-size="15" font-weight="bold" fill="#333">Hydro-industrial cluster</text>
+  <text x="350" y="266" text-anchor="middle" font-size="12" fill="#555">high-density growth hub at the node</text>
+
+  <!-- Industries around the cluster -->
+  <g font-size="12" fill="#333">
+    <rect x="22" y="200" width="150" height="34" rx="6" fill="#fff" stroke="#999"/>
+    <text x="97" y="222" text-anchor="middle">Cement</text>
+    <rect x="22" y="250" width="150" height="34" rx="6" fill="#fff" stroke="#999"/>
+    <text x="97" y="272" text-anchor="middle">Steel</text>
+    <rect x="528" y="200" width="150" height="34" rx="6" fill="#fff" stroke="#999"/>
+    <text x="603" y="222" text-anchor="middle">Food processing</text>
+    <rect x="528" y="250" width="150" height="34" rx="6" fill="#fff" stroke="#999"/>
+    <text x="603" y="266" text-anchor="middle" font-size="11">Pipes, pumps and</text>
+    <text x="603" y="279" text-anchor="middle" font-size="11">maintenance equipment</text>
+  </g>
+  <line x1="172" y1="217" x2="225" y2="232" stroke="#999" stroke-width="1.5"/>
+  <line x1="172" y1="267" x2="218" y2="262" stroke="#999" stroke-width="1.5"/>
+  <line x1="528" y1="217" x2="475" y2="232" stroke="#999" stroke-width="1.5"/>
+  <line x1="528" y1="267" x2="482" y2="262" stroke="#999" stroke-width="1.5"/>
+
+  <!-- Outward links -->
+  <path d="M290 305 L 150 360" fill="none" stroke="#f0a030" stroke-width="3" stroke-dasharray="7 5"/>
+  <path d="M410 305 L 550 360" fill="none" stroke="#f0a030" stroke-width="3" stroke-dasharray="7 5"/>
+  <path d="M350 310 L 350 360" fill="none" stroke="#8a7fd8" stroke-width="3" stroke-dasharray="7 5"/>
+  <g font-size="12" fill="#333">
+    <rect x="40" y="360" width="190" height="40" rx="6" fill="#fff" stroke="#f0a030"/>
+    <text x="135" y="377" text-anchor="middle">Coastal industry</text>
+    <text x="135" y="392" text-anchor="middle" fill="#666" font-size="11">rail branch</text>
+    <rect x="255" y="360" width="190" height="40" rx="6" fill="#fff" stroke="#8a7fd8"/>
+    <text x="350" y="377" text-anchor="middle">Irrigated agriculture</text>
+    <text x="350" y="392" text-anchor="middle" fill="#666" font-size="11">water delivery</text>
+    <rect x="470" y="360" width="190" height="40" rx="6" fill="#fff" stroke="#f0a030"/>
+    <text x="565" y="377" text-anchor="middle">Regional markets</text>
+    <text x="565" y="392" text-anchor="middle" fill="#666" font-size="11">rail branches and roads</text>
+  </g>
+
+  <text x="350" y="428" text-anchor="middle" font-size="11" fill="#777">Phase 3 (Years 6–10): local supply chains cut import dependency and response times.</text>
+</svg>
