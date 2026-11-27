@@ -56,3 +56,24 @@ clearly legible, not faint.
 NOTES
 -----
 Tool: ChatGPT GPT-4o image generation
+
+
+NIGHT VARIANTS (added 2026-11-27)
+---------------------------------
+night/cornerstone-night-spotlight.png  — night, two warm uplights from the pavement
+night/cornerstone-night-spotlight.mp4  — same, the uplights sweep slowly; 4 s seamless loop, 1536x1024, H.264, 24 fps, no audio
+night/cornerstone-night-storm.png      — stormy night: rain, a lightning bolt with half-strength flash, teal neon tracing the gold letters
+night/cornerstone-night-storm.mp4      — same, 6 s seamless loop: rain at three depths, a double lightning strike and a softer one, one neon flicker
+
+Made from oatCornerstoneBuilding.png by scripts/cornerstone-night.py (numpy/scipy relighting of the
+original pixels; nothing is painted over the stone, so the lettering and texture are the photo's own).
+Colours follow oat-standards standards/design-system.md. Re-run:
+    python3 scripts/cornerstone-night.py spotlight brand/oat-cornerstone/night
+    python3 scripts/cornerstone-night.py storm     brand/oat-cornerstone/night
+On the site: <video autoplay muted loop playsinline poster="cornerstone-night-spotlight.png">.
+
+SQUARE BADGE (added 2026-11-27)
+-------------------------------
+exports/oat-badge-square-400.png — 400x400 from oatLogoGraniteGold.png with the full "OAT / OWEN'S APPLIED
+THINKING / EST. MMXXV" in frame (granite extended above and below). Replaces oat-badge-large-200.png for new
+graphics, which crops the O and T; the old file is kept for existing links.
