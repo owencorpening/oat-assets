@@ -23,12 +23,12 @@
   <text x="70" y="125" class="content">Header: [brand image], 700px,</text>
   <text x="80" y="143" class="content">before first `---`</text>
 
-  <line x="70" y="160" x2="530" y2="160" stroke="#ecf0f1" stroke-width="1" />
+  <line x1="70" y1="160" x2="530" y2="160" stroke="#ecf0f1" stroke-width="1" />
 
   <text x="70" y="190" class="content">Footer: [brand asset], 400px,</text>
   <text x="80" y="208" class="content">above CTA text</text>
 
-  <line x="70" y="225" x2="530" y2="225" stroke="#ecf0f1" stroke-width="1" />
+  <line x1="70" y1="225" x2="530" y2="225" stroke="#ecf0f1" stroke-width="1" />
 
   <text x="70" y="255" class="content">Never use the flat logo in articles —</text>
   <text x="80" y="273" class="content">reserved for app icons only.</text>
