@@ -1,0 +1,57 @@
+Image Attribution Logger — Brand Asset Notes
+==============================================
+
+Log an image's source and credit to your own Google Sheet in one click.
+Endorsed OAT tool: wordmark and cards carry "AN OAT TOOL".
+
+FOLDERS
+-------
+master/     the three sources everything else is made from
+              image-attribution-logger-hero(.svg, -512.png, -1024.png)       3D hero, transparent; -dark on an ink rounded square
+              image-attribution-logger-icon(.svg, -dark.svg)                 flat plinth tile, 128 grid
+              image-attribution-logger-wordmark(.svg, -dark.svg)             icon + name + AN OAT TOOL
+exports/    one file per platform use (see resolution-matrix.md); exports/svg/ holds the vector
+            source of each, so image-attribution-logger-export.sh can rebuild the PNG/ICO files on its own
+motion/     short loops of the hero, each a still (.png) and a seamless loop (.mp4)
+icon/ wordmark/ banner/ icon-hero/
+            the earlier kit, unchanged; paths already in use keep working
+
+PLATFORMS
+---------
+A bookmarklet plus Apps Script: bookmarklets carry no icon, so only the GitHub and link-preview cards.
+
+MOTION
+------
+motion/image-attribution-logger-calm.png / .mp4  — On ink: a slow sheen passes over the hero and its brass detail breathes; 6 s loop.
+motion/image-attribution-logger-night-spotlight.png / .mp4  — Night on a stone backdrop: two warm uplights sweep slowly; 4 s loop.
+motion/image-attribution-logger-night-storm.png / .mp4  — Stormy night: rain at three depths, a double lightning strike and a softer one, neon tracing the brass detail in the product’s light accent, one flicker; 6 s loop.
+motion/image-attribution-logger-snow.png / .mp4  — Winter dusk: snow falling at three depths with a slight drift, snow lying on the hero’s top faces and on the ground, the brass detail glowing warm; 6 s loop.
+All 1536×1024 (the cornerstone's night size), H.264, yuv420p, 24 fps, no audio, faststart.
+Every loop is seamless: rain and snow move a whole number of screen heights per loop, lights
+and glows run on whole cycles.
+On a web page: <video autoplay muted loop playsinline poster="image-attribution-logger-calm.png" src="image-attribution-logger-calm.mp4"></video>
+
+COLOUR
+------
+  Sage           #3F6B4A  Icon face; accent on light
+  Sage deep      #2D4E36  Icon lip
+  Sage light     #A9CDB2  Accent on dark; dark-mode outline
+  Brass light    #D9A93A  The credit tag; one spot only
+  Ink            #1E2226  Text on light; dark backgrounds
+  Limestone      #F4F1EA  Light backgrounds; text on dark
+
+RULES
+-----
+- Repo name is image-capture; the product name is Image Attribution Logger.
+- Clear space around the icon: one lip height (one eighth of the icon).
+- Small sizes (favicons, toolbar, 16–48 px) use the flat tile; the 3D hero is for 256 px and up.
+
+HOW IT WAS MADE
+---------------
+Drawn in code by the brand kit (project files brand/brand-kit/; belongs in oat-tools):
+    python3 gen.py    BRANDDIR image-attribution-logger       icon/, wordmark/, banner/, brand sheet
+    python3 heroes.py BRANDDIR image-attribution-logger       icon-hero/ (3D hero)
+    python3 assets.py BRANDDIR BRANDDIR image-attribution-logger   master/, exports/, notes, matrix, script, licence
+    python3 motion.py BRANDDIR BRANDDIR image-attribution-logger   motion/ (needs numpy, scipy, Pillow, ffmpeg)
+Lettering is Source Serif 4 SemiBold and Inter, converted to outlines.
+Made 2026-11-27.

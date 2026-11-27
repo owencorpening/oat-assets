@@ -1,0 +1,57 @@
+Cheatsheets — Brand Asset Notes
+=================================
+
+Your own Markdown and HTML cheatsheets, in VS Code's sidebar.
+Endorsed OAT tool: wordmark and cards carry "AN OAT TOOL".
+
+FOLDERS
+-------
+master/     the three sources everything else is made from
+              cheatsheets-hero(.svg, -512.png, -1024.png)       3D hero, transparent; -dark on an ink rounded square
+              cheatsheets-icon(.svg, -dark.svg)                 flat plinth tile, 128 grid
+              cheatsheets-wordmark(.svg, -dark.svg)             icon + name + AN OAT TOOL
+exports/    one file per platform use (see resolution-matrix.md); exports/svg/ holds the vector
+            source of each, so cheatsheets-export.sh can rebuild the PNG/ICO files on its own
+motion/     short loops of the hero, each a still (.png) and a seamless loop (.mp4)
+icon/ wordmark/ banner/ icon-hero/
+            the earlier kit, unchanged; paths already in use keep working
+
+PLATFORMS
+---------
+VS Code extension (Marketplace publishing is next): the 128 px Marketplace / Open VSX icon and a monochrome view icon for its sidebar.
+
+MOTION
+------
+motion/cheatsheets-calm.png / .mp4  — On ink: a slow sheen passes over the hero and its brass detail breathes; 6 s loop.
+motion/cheatsheets-night-spotlight.png / .mp4  — Night on a stone backdrop: two warm uplights sweep slowly; 4 s loop.
+motion/cheatsheets-night-storm.png / .mp4  — Stormy night: rain at three depths, a double lightning strike and a softer one, neon tracing the brass detail in the product’s light accent, one flicker; 6 s loop.
+motion/cheatsheets-snow.png / .mp4  — Winter dusk: snow falling at three depths with a slight drift, snow lying on the hero’s top faces and on the ground, the brass detail glowing warm; 6 s loop.
+All 1536×1024 (the cornerstone's night size), H.264, yuv420p, 24 fps, no audio, faststart.
+Every loop is seamless: rain and snow move a whole number of screen heights per loop, lights
+and glows run on whole cycles.
+On a web page: <video autoplay muted loop playsinline poster="cheatsheets-calm.png" src="cheatsheets-calm.mp4"></video>
+
+COLOUR
+------
+  Granite        #4A5056  Icon face; accent on light
+  Granite deep   #33383D  Icon lip
+  Stone          #D9D6CF  Accent on dark; dark-mode outline
+  Brass light    #D9A93A  The fold; one spot only
+  Ink            #1E2226  Text on light; dark backgrounds
+  Limestone      #F4F1EA  Light backgrounds; text on dark
+
+RULES
+-----
+- Granite is shared with the OAT neutrals; the brass fold is what marks it.
+- Clear space around the icon: one lip height (one eighth of the icon).
+- Small sizes (favicons, toolbar, 16–48 px) use the flat tile; the 3D hero is for 256 px and up.
+
+HOW IT WAS MADE
+---------------
+Drawn in code by the brand kit (project files brand/brand-kit/; belongs in oat-tools):
+    python3 gen.py    BRANDDIR cheatsheets       icon/, wordmark/, banner/, brand sheet
+    python3 heroes.py BRANDDIR cheatsheets       icon-hero/ (3D hero)
+    python3 assets.py BRANDDIR BRANDDIR cheatsheets   master/, exports/, notes, matrix, script, licence
+    python3 motion.py BRANDDIR BRANDDIR cheatsheets   motion/ (needs numpy, scipy, Pillow, ffmpeg)
+Lettering is Source Serif 4 SemiBold and Inter, converted to outlines.
+Made 2026-11-27.

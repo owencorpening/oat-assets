@@ -64,6 +64,7 @@ night/cornerstone-night-spotlight.png  — night, two warm uplights from the pav
 night/cornerstone-night-spotlight.mp4  — same, the uplights sweep slowly; 4 s seamless loop, 1536x1024, H.264, 24 fps, no audio
 night/cornerstone-night-storm.png      — stormy night: rain, a lightning bolt with half-strength flash, teal neon tracing the gold letters
 night/cornerstone-night-storm.mp4      — same, 6 s seamless loop: rain at three depths, a double lightning strike and a softer one, one neon flicker
+winter/ — snow variant (dusk, snow on the stone, falling snow); see winter/notes.txt.
 
 Made from oatCornerstoneBuilding.png by scripts/cornerstone-night.py (numpy/scipy relighting of the
 original pixels; nothing is painted over the stone, so the lettering and texture are the photo's own).

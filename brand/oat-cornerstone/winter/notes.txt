@@ -1,0 +1,17 @@
+OAT Cornerstone — Snow variant (added 2026-11-27)
+==================================================
+
+cornerstone-snow.png  — winter dusk: cool relit stone, dusk-blue sky, the brass OAT and the wall
+                        lantern glowing warm, snow lying on the cushion moulding, the shelf above
+                        the block, the plinth and the walkway, snow falling
+cornerstone-snow.mp4  — same, 6 s seamless loop: snow at three depths with a slight drift, the
+                        warm light breathing gently; 1536x1024, H.264, 24 fps, no audio
+
+Made from oatCornerstoneBuilding.png by scripts/cornerstone-snow.py (numpy/scipy relighting of
+the original pixels, like the night variants). Unlike the night variants, the snow caps are
+painted in: thin bands that follow the stone's own edges, measured from the photo's luminance
+(groove above the cushion, shelf above the block, the block's base on the plinth). The
+lettering and texture stay the photo's own.
+Re-run:
+    python3 scripts/cornerstone-snow.py brand/oat-cornerstone/oatCornerstoneBuilding.png brand/oat-cornerstone/winter
+On the site: <video autoplay muted loop playsinline poster="cornerstone-snow.png">.
